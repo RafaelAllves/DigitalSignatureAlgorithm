@@ -19,6 +19,8 @@ public class ECDSATest {
         }
         System.out.println("Tempo médio de geração de chave (nanosegundos): " + (totalKeyGenTime / numIterations));
 
+        KeyPair keyPair = ECDSA.generateKeyPair();
+
         PrivateKey privateKey = keyPair.getPrivate();
         long totalSignTime = 0;
         for (int i = 0; i < numIterations; i++) {
